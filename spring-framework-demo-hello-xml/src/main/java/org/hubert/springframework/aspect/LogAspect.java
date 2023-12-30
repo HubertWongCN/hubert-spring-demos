@@ -9,7 +9,6 @@ import java.lang.reflect.Method;
 
 /**
  * @author hubertwong
- * @date 2023/12/31 00:20
  */
 @Aspect
 public class LogAspect {
@@ -17,8 +16,8 @@ public class LogAspect {
      * aspect for every method under service package
      *
      * @param pjp proceed join point
-     * @return
-     * @throws Throwable
+     * @return {@link Object}
+     * @throws Throwable exception
      */
     @Around("execution(* org.hubert.springframework.service.*.*(..))")
     public Object businessService(ProceedingJoinPoint pjp) throws Throwable {

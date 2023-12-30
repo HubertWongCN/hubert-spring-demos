@@ -4,7 +4,6 @@ import java.util.Objects;
 
 /**
  * @author hubertwong
- * @date 2023/12/31 00:10
  */
 public class User {
     /**
