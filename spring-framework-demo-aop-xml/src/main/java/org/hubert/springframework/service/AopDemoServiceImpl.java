@@ -8,8 +8,9 @@ public class AopDemoServiceImpl {
         System.out.println("AopDemoServiceImpl.doMethod1()");
     }
 
-    public void doMethod2() {
+    public String doMethod2() {
         System.out.println("AopDemoServiceImpl.doMethod2()");
+        return "hello world";
     }
 
     public void doMethod3() throws Exception {

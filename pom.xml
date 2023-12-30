@@ -13,6 +13,7 @@
         <module>spring-framework-demo-hello-java</module>
         <module>spring-framework-demo-hello-annotation</module>
         <module>spring-framework-demo-aop-xml</module>
+        <module>spring-framework-demo-aop-annotation</module>
     </modules>
 
     <properties>
