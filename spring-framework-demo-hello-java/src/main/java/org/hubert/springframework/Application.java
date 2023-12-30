@@ -1,9 +1,10 @@
 package org.hubert.springframework;
 
+import org.hubert.springframework.config.BeansConfig;
 import org.hubert.springframework.entity.User;
 import org.hubert.springframework.service.UserServiceImpl;
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import java.util.List;
 
@@ -19,7 +20,7 @@ public class Application {
     public static void main(String[] args) {
         // create and configure beans
         ApplicationContext context =
-                new ClassPathXmlApplicationContext("aspects.xml", "daos.xml", "services.xml");
+                new AnnotationConfigApplicationContext(BeansConfig.class);
 
         // retrieve configured instance
         UserServiceImpl service = context.getBean("userService", UserServiceImpl.class);

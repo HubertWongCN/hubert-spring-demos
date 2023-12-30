@@ -10,6 +10,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>spring-framework-demo-hello-xml</module>
+        <module>spring-framework-demo-hello-java</module>
     </modules>
 
     <properties>
