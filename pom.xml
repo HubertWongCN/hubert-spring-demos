@@ -18,6 +18,7 @@
         <module>spring-framework-demo-bean-lifecycle</module>
         <module>spring-framework-demo-aop-proxy-cglib</module>
         <module>spring-framework-demo-aop-proxy-jdk</module>
+        <module>springboot-demo-helloworld</module>
     </modules>
 
     <properties>
