@@ -16,6 +16,8 @@
         <module>spring-framework-demo-aop-annotation</module>
         <module>spring-framework-demo-springmvc</module>
         <module>spring-framework-demo-bean-lifecycle</module>
+        <module>spring-framework-demo-aop-proxy-cglib</module>
+        <module>spring-framework-demo-aop-proxy-jdk</module>
     </modules>
 
     <properties>
