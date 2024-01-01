@@ -22,6 +22,7 @@
         <module>springboot-demo-helloworld-mvc</module>
         <module>springboot-demo-db-h2-jpa</module>
         <module>springboot-demo-banner</module>
+        <module>springboot-demo-logback</module>
     </modules>
 
     <properties>

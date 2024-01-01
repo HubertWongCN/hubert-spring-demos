@@ -1,0 +1,9 @@
+logging:
+  level:
+    root: debug
+  file:
+    path: /Users/hubertwong/IdeaProjects/hubert-spring-demos/springboot-demo-logback/log/springboot-logback-demo
+spring:
+  application:
+    name: springboot-logback-demo
+debug: false

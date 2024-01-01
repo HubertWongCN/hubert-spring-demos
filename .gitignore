@@ -43,3 +43,4 @@ out
 */.gitignore
 */.mvn
 */mvn*
+*/log
