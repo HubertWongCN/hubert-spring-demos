@@ -1,0 +1,12 @@
+spring:
+  banner:
+    charset: UTF-8
+#    image:
+#      margin: 0
+#      height: 10
+#      invert: false
+#      location: classpath:Banner.png
+    location: banner.txt
+  main:
+    banner-mode: console
+    show-banner: true
