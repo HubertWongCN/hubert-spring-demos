@@ -25,6 +25,7 @@
         <module>springboot-demo-logback</module>
         <module>springboot-demo-validation</module>
         <module>springboot-demo-validation-group</module>
+        <module>springboot-demo-validation-i18n</module>
     </modules>
 
     <properties>
