@@ -26,6 +26,7 @@
         <module>springboot-demo-validation</module>
         <module>springboot-demo-validation-group</module>
         <module>springboot-demo-validation-i18n</module>
+        <module>springboot-demo-validation-exception-handler</module>
     </modules>
 
     <properties>
