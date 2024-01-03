@@ -24,6 +24,7 @@
         <module>springboot-demo-banner</module>
         <module>springboot-demo-logback</module>
         <module>springboot-demo-validation</module>
+        <module>springboot-demo-validation-group</module>
     </modules>
 
     <properties>
