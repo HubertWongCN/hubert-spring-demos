@@ -1,0 +1,33 @@
+mybatis:
+  type-aliases-package: org.hubert.springboot.shardingjdbc.mybatis.tables.entity
+  configuration:
+    cache-enabled: true
+    use-generated-keys: true
+    default-executor-type: reuse
+    use-actual-param-name: true
+
+spring:
+  shardingsphere:
+    datasource:
+      names: ds
+      ds:
+        type: com.zaxxer.hikari.HikariDataSource
+        driver-class-name: com.mysql.jdbc.Driver
+        jdbc-url: jdbc:mysql://localhost:3306/test_db_sharding?useSSL=false&autoReconnect=true&characterEncoding=utf8&AllowPublicKeyRetrieval=true
+        username: root
+        password: 123456
+    sharding:
+      tables:
+        tb_user:
+          actual-data-nodes: ds.tb_user_$->{0..1}
+          table-strategy:
+            inline:
+              sharding-column: id
+              algorithm-expression: tb_user_$->{id % 2}
+          key-generator:
+            column: id
+            type: SNOWFLAKE
+            props:
+              worker:
+                id: 123
+      binding-tables: tb_user

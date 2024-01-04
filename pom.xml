@@ -43,6 +43,7 @@
         <module>springboot-demo-mysql57-mybatisplus-annotation</module>
         <module>springboot-demo-mysql57-mybatisplus-gencode</module>
         <module>springboot-demo-mysql57-mybatisplus-tenant</module>
+        <module>springboot-demo-shardingjdbc-mybatis-tables</module>
     </modules>
 
     <properties>
