@@ -1,0 +1,58 @@
+spring:
+  shardingsphere:
+    datasource:
+      names: ds
+      ds:
+        type: com.zaxxer.hikari.HikariDataSource
+        driver-class-name: com.mysql.jdbc.Driver
+        jdbc-url: jdbc:mysql://localhost:3306/test_db_sharding?useSSL=false&autoReconnect=true&characterEncoding=utf8&AllowPublicKeyRetrieval=true
+        username: root
+        password: 123456
+    sharding:
+      tables:
+        tb_user:
+          actual-data-nodes: ds.tb_user_$->{0..1}
+          table-strategy:
+            inline:
+              sharding-column: id
+              algorithm-expression: tb_user_$->{id % 2}
+          key-generator:
+            column: id
+            type: SNOWFLAKE
+            props:
+              worker:
+                id: 123
+        tb_role:
+          actual-data-nodes: ds.tb_role_$->{0..1}
+          table-strategy:
+            inline:
+              sharding-column: id
+              algorithm-expression: tb_role_$->{id % 2}
+          key-generator:
+            column: id
+            type: SNOWFLAKE
+            props:
+              worker:
+                id: 123
+        tb_user_role:
+          actual-data-nodes: ds.tb_user_role_$->{0..1}
+          table-strategy:
+            inline:
+              sharding-column: id
+              algorithm-expression: tb_user_role_$->{id % 2}
+          key-generator:
+            column: id
+            type: SNOWFLAKE
+            props:
+              worker:
+                id: 123
+      binding-tables: tb_user,tb_role,tb_user_role
+  jpa:
+    open-in-view: false
+    generate-ddl: false
+    show-sql: false
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+        format_sql: true
+        use-new-id-generator-mappings: false
