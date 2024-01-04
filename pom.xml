@@ -28,6 +28,7 @@
         <module>springboot-demo-validation-i18n</module>
         <module>springboot-demo-validation-exception-handler</module>
         <module>springboot-demo-api-multi-version</module>
+        <module>springboot-demo-swagger-v3-openapi</module>
     </modules>
 
     <properties>
