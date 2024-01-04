@@ -41,6 +41,7 @@
         <module>springboot-demo-mysql57-mybatis-annotation</module>
         <module>springboot-demo-mysql57-mybatisplus-xml</module>
         <module>springboot-demo-mysql57-mybatisplus-annotation</module>
+        <module>springboot-demo-mysql57-mybatisplus-gencode</module>
     </modules>
 
     <properties>
