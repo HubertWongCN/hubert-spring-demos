@@ -35,6 +35,7 @@
         <module>springboot-demo-knife4j-v2</module>
         <module>springboot-demo-smart-doc</module>
         <module>springboot-demo-api-sign</module>
+        <module>springboot-demo-ratelimit-guava-reatelimiter</module>
     </modules>
 
     <properties>
