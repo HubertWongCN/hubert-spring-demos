@@ -34,6 +34,7 @@
         <module>springboot-demo-swagger-v2-bootstrap-ui</module>
         <module>springboot-demo-knife4j-v2</module>
         <module>springboot-demo-smart-doc</module>
+        <module>springboot-demo-api-sign</module>
     </modules>
 
     <properties>
