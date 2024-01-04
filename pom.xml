@@ -38,6 +38,7 @@
         <module>springboot-demo-ratelimit-guava-reatelimiter</module>
         <module>springboot-demo-mysql57-jpa</module>
         <module>springboot-demo-mysql57-mybatis-xml</module>
+        <module>springboot-demo-mysql57-mybatis-annotation</module>
     </modules>
 
     <properties>
