@@ -45,6 +45,7 @@
         <module>springboot-demo-mysql57-mybatisplus-tenant</module>
         <module>springboot-demo-shardingjdbc-mybatis-tables</module>
         <module>springboot-demo-shardingjdbc-jpa-tables</module>
+        <module>springboot-demo-shardingjdbc-jpa-masterslave</module>
     </modules>
 
     <properties>
