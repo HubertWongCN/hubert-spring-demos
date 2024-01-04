@@ -32,6 +32,7 @@
         <module>springboot-demo-knife4j-v3</module>
         <module>springboot-demo-swagger-v2</module>
         <module>springboot-demo-swagger-v2-bootstrap-ui</module>
+        <module>springboot-demo-knife4j-v2</module>
     </modules>
 
     <properties>
