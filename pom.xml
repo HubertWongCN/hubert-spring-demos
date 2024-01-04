@@ -37,6 +37,7 @@
         <module>springboot-demo-api-sign</module>
         <module>springboot-demo-ratelimit-guava-reatelimiter</module>
         <module>springboot-demo-mysql57-jpa</module>
+        <module>springboot-demo-mysql57-mybatis-xml</module>
     </modules>
 
     <properties>
