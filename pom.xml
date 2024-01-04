@@ -31,6 +31,7 @@
         <module>springboot-demo-swagger-v3-openapi</module>
         <module>springboot-demo-knife4j-v3</module>
         <module>springboot-demo-swagger-v2</module>
+        <module>springboot-demo-swagger-v2-bootstrap-ui</module>
     </modules>
 
     <properties>
