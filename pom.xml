@@ -48,6 +48,7 @@
         <module>springboot-demo-shardingjdbc-jpa-masterslave</module>
         <module>springboot-demo-sharding-jpa-tenant-db</module>
         <module>springboot-demo-shardingjdbc-jpa-tenant-db-hint</module>
+        <module>springboot-demo-mysql-jpa-hikariCP</module>
     </modules>
 
     <properties>
