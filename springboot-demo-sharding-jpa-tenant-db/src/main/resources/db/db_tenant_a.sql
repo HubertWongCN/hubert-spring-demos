@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 8.1.0, for macos13 (arm64)
 --
--- Host: localhost    Database: test_db_sharding_master
+-- Host: localhost    Database: test_db_tenant_a
 -- ------------------------------------------------------
 -- Server version	5.7.44
 
@@ -23,14 +23,15 @@ DROP TABLE IF EXISTS `tb_role`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `tb_role` (
-                           `id` int(11) NOT NULL AUTO_INCREMENT,
+                           `id` bigint(20) NOT NULL,
                            `name` varchar(255) NOT NULL,
                            `role_key` varchar(255) NOT NULL,
                            `description` varchar(255) DEFAULT NULL,
                            `create_time` datetime DEFAULT NULL,
                            `update_time` datetime DEFAULT NULL,
+                           `tenant` varchar(45) DEFAULT NULL,
                            PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -50,7 +51,7 @@ DROP TABLE IF EXISTS `tb_user`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `tb_user` (
-                           `id` int(11) NOT NULL AUTO_INCREMENT,
+                           `id` bigint(20) NOT NULL,
                            `user_name` varchar(45) NOT NULL,
                            `password` varchar(45) NOT NULL,
                            `email` varchar(45) DEFAULT NULL,
@@ -58,8 +59,9 @@ CREATE TABLE `tb_user` (
                            `description` varchar(255) DEFAULT NULL,
                            `create_time` datetime DEFAULT NULL,
                            `update_time` datetime DEFAULT NULL,
+                           `tenant` varchar(45) DEFAULT NULL,
                            PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -68,7 +70,6 @@ CREATE TABLE `tb_user` (
 
 LOCK TABLES `tb_user` WRITE;
 /*!40000 ALTER TABLE `tb_user` DISABLE KEYS */;
-INSERT INTO `tb_user` VALUES (2,'hubertwong2','aaa','hubertwong@hubertwong.tech',123133332,'hubertwong2','2022-04-06 20:44:34','2022-04-06 20:44:34');
 /*!40000 ALTER TABLE `tb_user` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -80,8 +81,11 @@ DROP TABLE IF EXISTS `tb_user_role`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `tb_user_role` (
-                                `user_id` int(11) NOT NULL,
-                                `role_id` int(11) NOT NULL
+                                `id` bigint(20) NOT NULL,
+                                `user_id` bigint(20) NOT NULL,
+                                `role_id` bigint(20) NOT NULL,
+                                `tenant` varchar(45) DEFAULT NULL,
+                                PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -103,4 +107,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-01-05  5:21:05
+-- Dump completed on 2024-01-05 22:07:09

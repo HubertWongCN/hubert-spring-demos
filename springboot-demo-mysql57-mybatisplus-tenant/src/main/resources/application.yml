@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: jdbc:mysql://43.139.115.202:3306/test_db_tenant?useSSL=false&autoReconnect=true&characterEncoding=utf8&AllowPublicKeyRetrieval=true
+    url: jdbc:mysql://localhost:3306/test_db_tenant?useSSL=false&autoReconnect=true&characterEncoding=utf8&AllowPublicKeyRetrieval=true
     driver-class-name: com.mysql.jdbc.Driver
     username: root
     password: 123456

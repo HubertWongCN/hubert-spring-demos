@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 8.1.0, for macos13 (arm64)
 --
--- Host: 43.139.115.202    Database: test_db_tenant
+-- Host: localhost    Database: test_db_tenant
 -- ------------------------------------------------------
 -- Server version	5.7.44
 
