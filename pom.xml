@@ -55,6 +55,7 @@
         <module>springboot-demo-postgre-jpa</module>
         <module>springboot-demo-postgre-mybatisplus</module>
         <module>springboot-demo-postgre-jpa-druid</module>
+        <module>springboot-demo-redis-jedis</module>
     </modules>
 
     <properties>
