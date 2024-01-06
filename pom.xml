@@ -63,6 +63,7 @@
         <module>springboot-demo-schedule-executor-service</module>
         <module>springboot-demo-schedule-netty-hashedwheeltimer</module>
         <module>springboot-demo-schedule-springtasks</module>
+        <module>springboot-demo-schedule-quartz</module>
     </modules>
 
     <properties>
