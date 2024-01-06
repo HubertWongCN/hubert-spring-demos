@@ -61,6 +61,7 @@
         <module>springboot-demo-redis-jedis-distribute-lock</module>
         <module>springboot-demo-schedule-timer</module>
         <module>springboot-demo-schedule-executor-service</module>
+        <module>springboot-demo-schedule-netty-hashedwheeltimer</module>
     </modules>
 
     <properties>
