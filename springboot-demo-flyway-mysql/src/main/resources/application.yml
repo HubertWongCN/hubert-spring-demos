@@ -1,0 +1,13 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/test_db_flyway?useSSL=false&autoReconnect=true&characterEncoding=utf8&AllowPublicKeyRetrieval=true
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 123456
+  flyway:
+    enabled: true
+    encoding: UTF-8
+    # \u53EF\u4EE5\u652F\u6301\u591A\u4E2A location\uFF0C\u7528`,`\u9694\u5F00
+    locations: classpath:db/migration
+    # migrate \u662F\u5426\u6821\u9A8C
+    validate-on-migrate: true

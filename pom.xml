@@ -51,6 +51,7 @@
         <module>springboot-demo-mysql-jpa-hikariCP</module>
         <module>springboot-demo-mysql-jpa-druid</module>
         <module>springboot-demo-liquibase-mysql-jpa</module>
+        <module>springboot-demo-flyway-mysql</module>
     </modules>
 
     <properties>
