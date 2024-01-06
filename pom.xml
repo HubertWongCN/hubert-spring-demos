@@ -53,6 +53,7 @@
         <module>springboot-demo-liquibase-mysql-jpa</module>
         <module>springboot-demo-flyway-mysql</module>
         <module>springboot-demo-postgre-jpa</module>
+        <module>springboot-demo-postgre-mybatisplus</module>
     </modules>
 
     <properties>
