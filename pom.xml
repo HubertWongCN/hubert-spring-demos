@@ -59,6 +59,7 @@
         <module>springboot-demo-redis-lettuce</module>
         <module>springboot-demo-redis-lettuce-enclosure</module>
         <module>springboot-demo-redis-jedis-distribute-lock</module>
+        <module>springboot-demo-schedule-timer</module>
     </modules>
 
     <properties>
