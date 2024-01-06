@@ -54,6 +54,7 @@
         <module>springboot-demo-flyway-mysql</module>
         <module>springboot-demo-postgre-jpa</module>
         <module>springboot-demo-postgre-mybatisplus</module>
+        <module>springboot-demo-postgre-jpa-druid</module>
     </modules>
 
     <properties>
