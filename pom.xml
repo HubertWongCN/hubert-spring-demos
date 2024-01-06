@@ -52,6 +52,7 @@
         <module>springboot-demo-mysql-jpa-druid</module>
         <module>springboot-demo-liquibase-mysql-jpa</module>
         <module>springboot-demo-flyway-mysql</module>
+        <module>springboot-demo-postgre-jpa</module>
     </modules>
 
     <properties>
