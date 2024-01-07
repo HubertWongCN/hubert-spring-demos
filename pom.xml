@@ -74,6 +74,7 @@
         <module>springboot-demo-file-word-poi</module>
         <module>springboot-demo-file-word-poi-tl</module>
         <module>springboot-demo-file-pdf-itextpdf</module>
+        <module>springboot-demo-helloworld-build-war</module>
     </modules>
 
     <properties>
