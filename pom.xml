@@ -77,6 +77,7 @@
         <module>springboot-demo-helloworld-build-war</module>
         <module>springboot-demo-helloworld-jetty</module>
         <module>springboot-demo-helloworld-undertow</module>
+        <module>springboot-demo-helloworld-docker</module>
     </modules>
 
     <properties>

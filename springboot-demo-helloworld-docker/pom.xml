@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.5.14</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+
+    <groupId>org.hubert</groupId>
+    <artifactId>springboot-demo-helloworld-docker</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/io.fabric8/docker-maven-plugin -->
+        <dependency>
+            <groupId>io.fabric8</groupId>
+            <artifactId>docker-maven-plugin</artifactId>
+            <version>0.43.4</version>
+        </dependency>
+
+    </dependencies>
+
+    <build>
+        <!-- 固定的jar的名字，这样Dockerfile可以固定写 -->
+        <finalName>springboot-demo-helloworld</finalName>
+        <!-- 构建的插件 -->
+        <plugins>
+            <!-- springboot构建jar -->
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>io.fabric8</groupId>
+                <artifactId>docker-maven-plugin</artifactId>
+                <version>0.43.4</version>
+                <configuration>
+                    <!--指定远程服务器的Docker服务访问地址-->
+<!--                    <dockerHost>tcp://192.168.65.0/24</dockerHost>-->
+                    <!--指定私有仓库的访问路径-->
+<!--                    <pushRegistry>http://192.168.65.0:5000</pushRegistry>-->
+                    <!--指定私有仓库的用户名与密码-->
+<!--                    <authConfig>-->
+<!--                        <username>root</username>-->
+<!--                        <password>abc123</password>-->
+<!--                    </authConfig>-->
+                    <images>
+                        <image>
+                            <!--指定私有仓库访问地址/镜像名称-->
+                            <name>${project.build.finalName}:${project.version}</name>
+                            <build>
+                                <!--指定Dockerfile的路径-->
+                                <dockerFileDir>${project.basedir}</dockerFileDir>
+                            </build>
+                            <!--指定docker run命令的参数-->
+<!--                            <run>-->
+<!--                                &lt;!&ndash;指定容器名称&ndash;&gt;-->
+<!--                                <containerNamePattern>${project.artifactId}</containerNamePattern>-->
+<!--                                <ports>-->
+<!--                                    &lt;!&ndash;指定端口映射关系&ndash;&gt;-->
+<!--                                    <port>3344:8080</port>-->
+<!--                                </ports>-->
+<!--                                <volumes>-->
+<!--                                    &lt;!&ndash;挂载目录&ndash;&gt;-->
+<!--                                    <bind>-->
+<!--                                        <volume>/home/docker/boot/helloworld:/ROOT</volume>-->
+<!--                                    </bind>-->
+<!--                                </volumes>-->
+<!--                            </run>-->
+                        </image>
+                    </images>
+                </configuration>
+                <!--指定在每次打包或者重新打包的时候运行该插件的build, push, run目标-->
+                <executions>
+                    <execution>
+                        <id>build-image</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>build</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <!-- 构建docker镜像 -->
+<!--            <plugin>-->
+<!--                <groupId>com.spotify</groupId>-->
+<!--                <artifactId>docker-maven-plugin</artifactId>-->
+<!--                <version>1.2.2</version>-->
+<!--                <executions>-->
+<!--                    <execution>-->
+<!--                        <id>build-image</id>-->
+<!--                        <phase>package</phase>-->
+<!--                        <goals>-->
+<!--                            <goal>build</goal>-->
+<!--                        </goals>-->
+<!--                    </execution>-->
+<!--                </executions>-->
+<!--                <configuration>-->
+<!--                    &lt;!&ndash; image 的名字 &ndash;&gt;-->
+<!--                    <imageName>${project.build.finalName}</imageName>-->
+<!--                    &lt;!&ndash; image 的tag, 可以是多个 &ndash;&gt;-->
+<!--                    <imageTags>-->
+<!--                        <imageTag>latest</imageTag>-->
+<!--                        <imageTag>${project.version}</imageTag>-->
+<!--                    </imageTags>-->
+<!--                    &lt;!&ndash; Dockerfile所在的目录 &ndash;&gt;-->
+<!--                    <dockerDirectory>${project.basedir}</dockerDirectory>-->
+<!--                    &lt;!&ndash; 复制jar到docker的位置 &ndash;&gt;-->
+<!--                    <resources>-->
+<!--                        <resource>-->
+<!--                            <targetPath>/</targetPath>-->
+<!--                            &lt;!&ndash;jar 包所在的路径，对应target目录&ndash;&gt;-->
+<!--                            <directory>${project.build.directory}</directory>-->
+<!--                            &lt;!&ndash; 包含的jar　&ndash;&gt;-->
+<!--                            <include>${project.build.finalName}.jar</include>-->
+<!--                        </resource>-->
+<!--                    </resources>-->
+<!--                </configuration>-->
+<!--            </plugin>-->
+        </plugins>
+    </build>
+</project>
