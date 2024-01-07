@@ -70,6 +70,7 @@
         <module>springboot-demo-file-updownload</module>
         <module>springboot-demo-file-excel-poi</module>
         <module>springboot-demo-file-excel-easyexcel</module>
+        <module>springboot-demo-file-excel-easypoi</module>
     </modules>
 
     <properties>
