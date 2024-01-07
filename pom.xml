@@ -65,6 +65,7 @@
         <module>springboot-demo-schedule-springtasks</module>
         <module>springboot-demo-schedule-quartz</module>
         <module>springboot-demo-schedule-quartz-cluster</module>
+        <module>springboot-demo-schedule-elastic-job-lite</module>
     </modules>
 
     <properties>
