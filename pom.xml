@@ -69,6 +69,7 @@
         <module>springboot-demo-schedule-xxl-job</module>
         <module>springboot-demo-file-updownload</module>
         <module>springboot-demo-file-excel-poi</module>
+        <module>springboot-demo-file-excel-easyexcel</module>
     </modules>
 
     <properties>
