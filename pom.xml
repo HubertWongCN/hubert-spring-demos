@@ -76,6 +76,7 @@
         <module>springboot-demo-file-pdf-itextpdf</module>
         <module>springboot-demo-helloworld-build-war</module>
         <module>springboot-demo-helloworld-jetty</module>
+        <module>springboot-demo-helloworld-undertow</module>
     </modules>
 
     <properties>
