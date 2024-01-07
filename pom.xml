@@ -72,6 +72,7 @@
         <module>springboot-demo-file-excel-easyexcel</module>
         <module>springboot-demo-file-excel-easypoi</module>
         <module>springboot-demo-file-word-poi</module>
+        <module>springboot-demo-file-word-poi-tl</module>
     </modules>
 
     <properties>
