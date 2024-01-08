@@ -80,6 +80,7 @@
         <module>springboot-demo-helloworld-docker</module>
         <module>springboot-demo-mysql-jpa-docker-compose</module>
         <module>springboot-demo-actuator</module>
+        <module>springboot-demo-admin</module>
     </modules>
 
     <properties>

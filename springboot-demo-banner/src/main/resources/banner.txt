@@ -6,9 +6,9 @@
 | | | | |_| | |_) |  __| |  | |_ 
 \_| |_/\__,_|_.__/ \___|_|   \__|
 ==============================================
-Application Version : ${application.version}
-Application Formatted Version : ${application.formatted-version}
-Application Title : ${application.title}
+org.hubert.spirngboot.admin.Application Version : ${application.version}
+org.hubert.spirngboot.admin.Application Formatted Version : ${application.formatted-version}
+org.hubert.spirngboot.admin.Application Title : ${application.title}
 Spring Boot Version : ${spring-boot.version}
 Spring Boot Formatted Version : ${spring-boot.formatted-version}
 ==============================================
