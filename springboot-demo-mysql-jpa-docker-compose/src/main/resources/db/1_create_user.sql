@@ -1,0 +1,4 @@
+-- CREATE USER 'hubert'@'%' IDENTIFIED WITH mysql_native_password BY 'sdqiireasgadklkklk';
+-- GRANT All privileges ON *.* TO 'hubert'@'%';
+--
+-- FLUSH PRIVILEGES;

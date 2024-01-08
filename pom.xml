@@ -78,6 +78,7 @@
         <module>springboot-demo-helloworld-jetty</module>
         <module>springboot-demo-helloworld-undertow</module>
         <module>springboot-demo-helloworld-docker</module>
+        <module>springboot-demo-mysql-jpa-docker-compose</module>
     </modules>
 
     <properties>
