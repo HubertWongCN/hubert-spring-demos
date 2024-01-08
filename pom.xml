@@ -79,6 +79,7 @@
         <module>springboot-demo-helloworld-undertow</module>
         <module>springboot-demo-helloworld-docker</module>
         <module>springboot-demo-mysql-jpa-docker-compose</module>
+        <module>springboot-demo-actuator</module>
     </modules>
 
     <properties>
